@@ -18,8 +18,7 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../bower_components/bootstrap/dis/css/bootstrap.css"
+        "styles.css"
       ],
       "scripts": [],
       "environments": {

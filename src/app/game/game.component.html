@@ -1,8 +1,8 @@
-<h1>MEINFIELD</h1>
+<h1>MINEFIELD</h1>
 
-<button (click)="mode(0.15)">Easy Mode</button>
-<button (click)="mode(0.25)">Normal Mode</button>
-<button (click)="mode(0.35)">A little harder Mode</button>
+<button (click)="mode(0.10)">Easy Mode</button>
+<button (click)="mode(0.15)">Normal Mode</button>
+<button (click)="mode(0.20)">A little harder Mode</button>
 
 <div class="board" *ngFor='let row of board'>
   <div class="tiles" *ngFor='let tile of row' (click)='userClick(tile)' (contextmenu)='userFlag(tile)'>
