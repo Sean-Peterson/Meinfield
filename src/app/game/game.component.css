@@ -1,0 +1,30 @@
+.board {
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+}
+
+.tiles {
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+
+.row {
+  height: 54px;
+  width: 521px;
+}
+
+.bomb {
+  /*margin-top: 50px;*/
+  /*margin-bottom: 10px;*/
+  text-align: center;
+  position: relative;
+}
