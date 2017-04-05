@@ -1,3 +1,7 @@
+.adjacent p {
+  font-size: 19px;
+}
+
 .board {
   min-height: 50px;
   min-width: 50px;

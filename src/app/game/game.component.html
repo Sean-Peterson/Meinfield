@@ -1,26 +1,35 @@
-<p>
-  game works!
-</p>
+<h1>MEINFIELD</h1>
+
+<button (click)="mode(0.15)">Easy Mode</button>
+<button (click)="mode(0.25)">Normal Mode</button>
+<button (click)="mode(0.35)">A little harder Mode</button>
 
 <div class="board" *ngFor='let row of board'>
-  <div class="tiles" *ngFor='let tile of row' (click)='userClick(tile)'>
-    <div class='bomb' *ngIf=(tile.clicked)>
+  <div class="tiles" *ngFor='let tile of row' (click)='userClick(tile)' (contextmenu)='userFlag(tile)'>
+    <div class='bomb' *ngIf=tile.clicked>
       <div *ngIf=(tile.bomb)>
         <p>
-          bomb
+          💣
         </p>
 
       </div>
-      <div *ngIf=(!tile.bomb)>
+      <div class='adjacent' *ngIf=(!tile.bomb)>
       <p>
         {{tile.adjacent}}
       </p>
     </div>
   </div>
   <div class="bomb" *ngIf=(!tile.clicked)>
-    <p>
-      -
-    </p>
+    <div class="bomb" *ngIf=(tile.flagged)>
+      <p>
+        🚩
+      </p>
+    </div>
+    <div class="bomb" *ngIf=(!tile.flagged)>
+      <p>
+        💩
+      </p>
+    </div>
   </div>
 
 </div>
